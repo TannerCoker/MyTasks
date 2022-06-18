@@ -1,0 +1,83 @@
+--DATABASE--
+
+User {
+userId
+name
+email
+phone
+password
+
+}
+
+Task {
+taskId
+task string
+date
+userId foreign key
+}
+
+--BACKEND--
+
+*Need a RestcontrollerAdvice
+
+*Logger
+
+*Need a user API that can:
+-Verify login
+-Add account
+-Modify account
+-Delete account
+-Delete tasklist?
+-Add tasklist?
+
+*Need a User DTO:
+-userID
+-String name (verify pattern)
+-String email (verify pattern)
+-String phone (verify pattern)
+-List of task DTOs
+
+*Need a User entity:
+-ManyToOne relationship on tasklist?
+
+*Need a User service:
+-Verify login
+-Add account
+-Modify account
+-Delete account
+-Add list
+-Delete list
+
+*Need a user repository
+
+*User validator?
+
+*Need a task API that can:
+-send the lists of todo lists
+-delete an item(s) from the list
+-add an item(s) to the list
+-modify a task/item from the list
+
+*Need a task DTO:
+-taskID
+-String task
+-Date (optional) (future or today)
+-Which list it belongs to (enum)
+
+*Need a task entity:
+-String task
+-Date
+-Which list it belongs to (enum)
+
+*Task service:
+-Get tasks
+-Add task
+-Modify task
+-Delete task
+-Delete tasks
+
+*Need a repository for task entities
+
+*May need a validator if there's a date for certain tasks
+
+--FRONTEND--

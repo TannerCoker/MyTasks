@@ -8,13 +8,13 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.list</groupId>
-	<artifactId>ToDoList</artifactId>
+	<groupId>com.MyTasks</groupId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ToDoList</name>
-	<description>A simple back-end service to keep track of and manage a todo list service for a web front-end. </description>
+	<name>MyTasks</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
