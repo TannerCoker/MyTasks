@@ -1,0 +1,9 @@
+package com.task.API;
+
+import org.apache.logging.log4j.LogManager;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TaskAPI {
+	private static final Logger logger = LogManager.getLogger(TaskAPI.class);
+}

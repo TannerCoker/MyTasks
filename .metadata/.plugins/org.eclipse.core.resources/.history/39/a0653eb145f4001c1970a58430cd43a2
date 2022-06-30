@@ -1,0 +1,6 @@
+package com.task.API;
+
+@RestController
+public class TaskAPI {
+
+}
