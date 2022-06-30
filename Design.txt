@@ -4,7 +4,6 @@ User {
 userId
 name
 email
-phone
 password
 
 }
@@ -15,6 +14,7 @@ task string
 date
 userId foreign key
 }
+
 
 --BACKEND--
 
