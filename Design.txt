@@ -81,3 +81,6 @@ userId foreign key
 *May need a validator if there's a date for certain tasks
 
 --FRONTEND--
+
+*Use a hashmap with <String, List<Tasks>> in order to put the tasks into their groups and iterate through the map to display groups and their tasks
+*Use nested DIVS, parent DIV loops through the key and then the child DIV loops through the tasks?
