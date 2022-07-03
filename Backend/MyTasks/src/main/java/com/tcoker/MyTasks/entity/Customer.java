@@ -1,5 +1,11 @@
 package com.tcoker.MyTasks.entity;
 
-public class Customer {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Customer {
+	
+	@Id
+	private int id;
 }
