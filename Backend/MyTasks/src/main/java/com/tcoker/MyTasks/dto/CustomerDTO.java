@@ -2,13 +2,14 @@ package com.tcoker.MyTasks.dto;
 
 import java.util.List;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 public class CustomerDTO {
 	
 	@NotNull //add missing email message
-	@Pattern(regexp = "[A-Za-z0-9._]+@[A-Za-z]{2,}\\.[A-Za-z][A-Za-z.]+") //add wrong pattern message
+	@Email//(regexp = "[A-Za-z0-9._]+@[A-Za-z]{2,}\\.[A-Za-z][A-Za-z.]+") //add wrong pattern message
 	private String emailId;
 	@NotNull //add missing name message
 	@Pattern(regexp = "([A-Za-z])+(\\s[A-Za-z]+)*") //name pattern wrong
