@@ -12,6 +12,7 @@ public class TaskDTO {
 	
 	private int taskId;
 	@NotNull
+	@Size(max=50)
 	private String taskGroup;
 	@NotNull
 	@Size(max=1000)
