@@ -6,4 +6,5 @@ import com.tcoker.MyTasks.entity.User;
 
 public interface UserRepo extends CrudRepository<User,Integer> {
 
+	public User findByEmail(String email);
 }
