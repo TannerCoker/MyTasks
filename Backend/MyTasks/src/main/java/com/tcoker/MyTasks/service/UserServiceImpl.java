@@ -1,10 +1,15 @@
 package com.tcoker.MyTasks.service;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tcoker.MyTasks.dto.UserDTO;
 import com.tcoker.MyTasks.repository.UserRepo;
 
+@Service
+@Transactional
 public class UserServiceImpl implements UserService{
 	
 	@Autowired
