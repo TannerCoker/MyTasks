@@ -21,6 +21,7 @@ public class TaskDTO {
 	private LocalDate date;
 	@NotNull
 	@Email
+	@Size(max=50)
 	private String userEmail;
 	
 	public String getUserEmail() {
