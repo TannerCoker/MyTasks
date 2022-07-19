@@ -16,31 +16,31 @@ public class UserServiceImpl implements UserService{
 	private UserRepo repo;
 
 	@Override
-	public Boolean verifyLogin(String emailId, String password) {
+	public Boolean verifyLogin(String emailId, String password) throws Exception{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String addUser(UserDTO dto) {
+	public String addUser(UserDTO dto) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public UserDTO getUser(String emailId) {
+	public UserDTO getUser(String emailId) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean deleteUser(String emailId) {
+	public Boolean deleteUser(String emailId) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean updateUser(UserDTO dto) {
+	public Boolean updateUser(UserDTO dto) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
