@@ -118,10 +118,5 @@ public class UserServiceImpl implements UserService{
 		return true;
 	}
 
-	@Override
-	public Boolean updateUser(UserDTO dto) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

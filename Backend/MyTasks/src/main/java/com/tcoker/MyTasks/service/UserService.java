@@ -8,6 +8,5 @@ public interface UserService {
 	String addUser(UserDTO dto) throws Exception;
 	UserDTO getUser(String emailId) throws Exception;
 	Boolean deleteUser(String emailId) throws Exception;
-	Boolean updateUser(UserDTO dto) throws Exception;
 	
 }
