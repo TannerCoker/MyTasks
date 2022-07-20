@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.tcoker.MyTasks.dto.TaskDTO;
 import com.tcoker.MyTasks.dto.UserDTO;
+import com.tcoker.MyTasks.entity.Task;
 import com.tcoker.MyTasks.entity.User;
 import com.tcoker.MyTasks.exceptions.TaskException;
 import com.tcoker.MyTasks.repository.UserRepo;
@@ -58,8 +59,28 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public String addUser(UserDTO dto) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		User user = repo.findByEmail(dto.getEmailId());
+		if(user != null) {
+			throw new TaskException("Service.EMAIL_TAKEN");
+		}
+		user = new User();
+		user.setEmail(dto.getEmailId());
+		user.setName(dto.getName());
+		user.setPassword(dto.getPassword());
+		user.setPhoneNumber(dto.getPhoneNumber());
+		if(!dto.getMyTasks().isEmpty()) {
+			List<Task> tasks = dto.getMyTasks().stream().map(t -> {
+				Task task = new Task();
+				task.setTaskId(t.getTaskId());
+				task.setTaskGroup(t.getTaskGroup());
+				task.setTaskDescription(t.getTaskDescription());
+				task.setDate(t.getDate());
+				return task;
+			}).collect(Collectors.toList());
+			user.setMyTasks(tasks);
+		}
+		repo.save(user);
+		return user.getEmail();
 	}
 
 	@Override
